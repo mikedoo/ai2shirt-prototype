@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>① 首页 · 衣想工作室原型</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●●● 100%</span></div>
+  <div class="page-body">
+    <div class="section">
+      <div class="placeholder" style="height:128px; border-radius:10px;">
+        品牌主视觉<br>「衣想工作室 · AI 创作 · 团队共创」<br><span class="tiny">同主题多人版本拼贴</span>
+      </div>
+    </div>
+    <div class="section">
+      <div class="card">
+        <div class="muted">输入一句灵感</div>
+        <textarea class="textarea" placeholder="例：复古插画风毕业班服" style="border:none; padding:4px 0 0; min-height:44px;"></textarea>
+        <div class="row between" style="margin-top:6px;">
+          <div class="row">
+            <div class="placeholder clickable" style="width:26px;height:26px;" data-toast="上传参考图 / Logo">📷</div>
+            <span class="tiny">上传参考图 / Logo</span>
+          </div>
+          <button class="btn btn-primary" style="width:96px;height:32px;font-size:11px;" data-go="create">开始创作</button>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">主题模板<span class="more" data-toast="查看全部模板">查看全部 ›</span></div>
+      <div class="grid-4">
+        <div class="placeholder clickable" style="height:64px;" data-go="create">毕业季</div>
+        <div class="placeholder clickable" style="height:64px;" data-go="create">班服</div>
+        <div class="placeholder clickable" style="height:64px;" data-go="create">社团</div>
+        <div class="placeholder clickable" style="height:64px;" data-go="create">活动服</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">同主题 · 多人版本<span class="more" data-toast="查看更多团队案例">›</span></div>
+      <div class="scroll-x">
+        <div class="placeholder clickable" style="width:140px; height:160px;" data-go="project-detail">毕业班 · 35 件<br>(成员各自版本)</div>
+        <div class="placeholder clickable" style="width:140px; height:160px;" data-go="project-detail">街舞社春季</div>
+        <div class="placeholder clickable" style="width:140px; height:160px;" data-go="project-detail">志愿迎新 T</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">我最近的作品</div>
+      <div class="grid-3">
+        <div class="placeholder clickable" style="height:80px;" data-go="editor">作品 A</div>
+        <div class="placeholder clickable" style="height:80px;" data-go="editor">作品 B</div>
+        <div class="placeholder clickable" style="height:80px;" data-go="create">+</div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-bar">
+    <div class="tab-item active"><div class="tab-icon"></div>首页</div>
+    <div class="tab-item" data-go="create"><div class="tab-icon"></div>创作</div>
+    <div class="tab-item" data-go="projects"><div class="tab-icon"></div>共创</div>
+    <div class="tab-item" data-go="my"><div class="tab-icon"></div>我的</div>
+  </div>
+</div>
+<script src="../page.js"></script>
+</body>
+</html>

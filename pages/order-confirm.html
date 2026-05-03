@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⑧ 下单确认 · 衣想工作室原型</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●●● 100%</span></div>
+  <div class="nav-bar">
+    <span class="slot icon-back" data-go="back"></span>
+    <span class="nav-title">订单确认</span>
+    <span class="slot"></span>
+  </div>
+  <div class="page-body">
+    <div class="section">
+      <div class="card clickable" data-toast="编辑收货人">
+        <div class="row between">
+          <span class="bold">收货人</span>
+          <span class="tiny">编辑 ›</span>
+        </div>
+        <div style="margin-top:4px;">张某某 · 138 0000 0000</div>
+        <div class="muted" style="margin-top:2px;">北京市海淀区学院路 XX 号 XXX 大学</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">商品信息</div>
+      <div class="card">
+        <div class="row" style="gap:10px;">
+          <div class="placeholder" style="width:60px;height:60px;flex-shrink:0;">样衣</div>
+          <div class="grow">
+            <div class="bold">圆领纯棉 T · 200g</div>
+            <div class="muted">白 · 标准版 · 正面单面印花</div>
+            <div class="tiny" style="margin-top:2px;">服务端权威生成印刷文件</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">尺码汇总（24 件）</div>
+      <div class="card">
+        <div class="grid-5" style="margin-bottom:6px;">
+          <div class="center"><div>S</div><div class="tiny">3</div></div>
+          <div class="center"><div>M</div><div class="tiny">8</div></div>
+          <div class="center"><div>L</div><div class="tiny">9</div></div>
+          <div class="center"><div>XL</div><div class="tiny">3</div></div>
+          <div class="center"><div>XXL</div><div class="tiny">1</div></div>
+        </div>
+        <div class="tiny clickable" data-toast="查看每件个性版本">每件对应一个个性版本图案 · 查看清单 ›</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="card" style="background:#f9f9f9;">
+        <div class="bold">⚠ 生产说明</div>
+        <div class="muted" style="margin-top:4px;">
+          · 实物颜色与屏幕预览可能存在轻微差异<br>· 不同尺码图案比例可能略变化<br>· 已通过印刷检查 · 在意可读性请复核
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="card">
+        <div class="row between"><span>商品金额</span><span>¥ 1,440</span></div>
+        <div class="row between" style="margin-top:4px;"><span>运费</span><span>¥ 0</span></div>
+        <div class="divider"></div>
+        <div class="row between"><span class="bold">应付</span><span class="bold">¥ 1,440</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <button class="btn btn-primary" data-go="order-detail" data-toast="支付成功">微信支付</button>
+      <div class="tiny center" style="margin-top:6px;">订单金额由服务端权威计算</div>
+    </div>
+  </div>
+</div>
+<script src="../page.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⑩ 订单详情 · 衣想工作室原型</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●●● 100%</span></div>
+  <div class="nav-bar">
+    <span class="slot icon-back" data-go="back"></span>
+    <span class="nav-title">订单详情</span>
+    <span class="slot center" data-toast="更多操作">⋯</span>
+  </div>
+  <div class="page-body">
+    <div class="section" style="background:#000; color:#fff;">
+      <div class="bold" style="font-size:16px;">生产中</div>
+      <div class="tiny" style="color:#ccc; margin-top:4px;">预计 2026-05-20 前发货</div>
+    </div>
+    <div class="section">
+      <div class="card">
+        <div class="row between" style="padding:6px 0;">
+          <span class="bold">已支付</span><span class="tiny">05-02 14:23</span>
+        </div>
+        <div class="row between" style="padding:6px 0;">
+          <span class="bold">生产中</span><span class="tiny">05-03 10:00</span>
+        </div>
+        <div class="row between" style="padding:6px 0;">
+          <span class="muted">已发货</span><span class="tiny">— —</span>
+        </div>
+        <div class="row between" style="padding:6px 0;">
+          <span class="muted">已完成</span><span class="tiny">— —</span>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">订单内容</div>
+      <div class="card">
+        <div class="row" style="gap:10px;">
+          <div class="placeholder" style="width:60px;height:60px;flex-shrink:0;">样衣</div>
+          <div class="grow">
+            <div class="bold">软工 2026 毕业班服</div>
+            <div class="muted">圆领纯棉 T · 白 · 24 件</div>
+            <div class="tiny" style="margin-top:4px;">S×3　M×8　L×9　XL×3　XXL×1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="card">
+        <div class="row between"><span>实付</span><span class="bold">¥ 1,440</span></div>
+        <div class="tiny clickable" style="color:#666; margin-top:4px;" data-toast="订单号已复制">订单号 2026050200001 · 复制</div>
+      </div>
+    </div>
+    <div class="section row" style="gap:8px;">
+      <button class="btn btn-secondary grow" data-toast="即将打开客服会话">联系客服</button>
+      <button class="btn btn-secondary grow" data-toast="暂无物流信息">查看物流</button>
+    </div>
+  </div>
+</div>
+<script src="../page.js"></script>
+</body>
+</html>

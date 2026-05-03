@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⑦a 我的提交状态 · 衣想工作室原型</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●●● 100%</span></div>
+  <div class="nav-bar">
+    <span class="slot icon-back" data-go="member-submit"></span>
+    <span class="nav-title">我的提交状态</span>
+    <span class="slot"></span>
+  </div>
+  <div class="page-body">
+    <div class="section" style="background:#f5f5f5;">
+      <div class="placeholder" style="height:200px; background:#fff;">我的个性样衣预览</div>
+      <div class="muted center" style="margin-top:6px;">软工 2026 毕业班服 · M × 1</div>
+    </div>
+    <div class="section">
+      <div class="card">
+        <div class="row between">
+          <span class="bold">审核状态</span>
+          <span class="chip active" style="margin:0;">待审核</span>
+        </div>
+        <div class="muted" style="margin-top:6px;">已提交给发起人；通过后将进入统一尺码汇总。</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">若被打回</div>
+      <div class="card" style="background:#f9f9f9;">
+        <div class="muted">这里会显示发起人的修改意见，例如“昵称过长”或“图案超出可改区域”。</div>
+        <button class="btn btn-secondary" style="margin-top:10px;" data-go="member-submit">按反馈修改</button>
+      </div>
+    </div>
+    <div class="section">
+      <button class="btn btn-primary" data-go="projects">查看共创项目</button>
+      <div class="tiny center" style="margin-top:6px;">成员只提交版本和尺码，不参与付款</div>
+    </div>
+  </div>
+</div>
+<script src="../page.js"></script>
+</body>
+</html>

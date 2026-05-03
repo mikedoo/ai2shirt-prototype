@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>② 创作页 · 衣想工作室原型</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="phone create-page" data-state="empty">
+  <div class="status-bar"><span>9:41</span><span>●●●●● 100%</span></div>
+  <div class="nav-bar">
+    <span class="slot" data-toast="查看创作历史">历史</span>
+    <span class="nav-title">创作样衣</span>
+    <span class="slot" data-toast="开始新对话">新对话</span>
+  </div>
+
+  <!-- 空状态：尚未开始对话 -->
+  <div class="create-empty-body">
+    <div class="empty-hero">
+      <div class="empty-title">想做什么场景的文化衫？</div>
+      <div class="empty-subtitle">从模板开始，或在下方直接说一句</div>
+      <div class="empty-template-grid">
+        <div class="template-card-lg empty-template" data-template="毕业季" data-toast="已选择毕业季，AI 将追问班级名和标语">
+          <div class="bold">毕业季</div>
+          <div class="tiny">班服 · 纪念</div>
+        </div>
+        <div class="template-card-lg empty-template" data-template="班服" data-toast="已选择班服，AI 将追问班级和统一元素">
+          <div class="bold">班服</div>
+          <div class="tiny">姓名 · 编号</div>
+        </div>
+        <div class="template-card-lg empty-template" data-template="社团" data-toast="已选择社团，AI 将追问社团名和活动风格">
+          <div class="bold">社团</div>
+          <div class="tiny">Logo · 口号</div>
+        </div>
+        <div class="template-card-lg empty-template" data-template="活动服" data-toast="已选择活动服，AI 将追问活动名和场景">
+          <div class="bold">活动服</div>
+          <div class="tiny">主题 · 日期</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 对话状态：已开始对话 -->
+  <div class="page-body create-chat-body">
+    <div class="section chat-stack">
+      <div class="chat-bubble assistant">
+        <div>想做什么场景的文化衫？你可以直接说一句，或者点上方模板开始。</div>
+      </div>
+      <div class="chat-bubble user">
+        <div class="muted">你</div>
+        <div>毕业季班服，复古插画，标语「四年同行」。</div>
+      </div>
+      <div class="chat-bubble assistant">
+        <div class="muted">AI 助手</div>
+        <div>我还需要 2 个信息：班级名是否要放进图案？有没有学院 Logo 或参考图？</div>
+        <div class="inline-action-row">
+          <button class="mini-btn" data-toast="补充班级名">填班级名</button>
+          <button class="mini-btn" data-toast="上传参考图 / Logo">上传图片</button>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="row between">
+          <span class="bold">已整理的信息</span>
+          <span class="tiny" data-toast="编辑信息">编辑</span>
+        </div>
+        <div class="muted" style="margin-top:6px;">
+          场景：毕业季班服<br>
+          风格：复古插画<br>
+          标语：四年同行<br>
+          待补充：班级名 / Logo
+        </div>
+      </div>
+      <div class="chat-bubble assistant">
+        <div class="muted">AI 助手</div>
+        <div>先给你 4 个方向，选一个继续改，或者直接进入样衣编辑。</div>
+      </div>
+      <div class="result-card">
+        <div class="section-title">候选图案<span class="more">点选放大</span></div>
+        <div class="grid-2">
+          <div class="placeholder clickable active" style="height:92px; border:2px solid #000;" data-chip-group="cand">候选 1 ✓</div>
+          <div class="placeholder clickable" style="height:92px;" data-chip-group="cand">候选 2</div>
+          <div class="placeholder clickable" style="height:92px;" data-chip-group="cand">候选 3</div>
+          <div class="placeholder clickable" style="height:92px;" data-chip-group="cand">候选 4</div>
+        </div>
+        <div class="row" style="margin-top:10px; gap:6px;">
+          <button class="btn btn-secondary grow" style="height:32px;font-size:11px;" data-toast="换成街头 / 文艺 / 极简">换风格</button>
+          <button class="btn btn-secondary grow" style="height:32px;font-size:11px;" data-toast="修改标语或文字布局">改文字</button>
+          <button class="btn btn-secondary grow" style="height:32px;font-size:11px;" data-toast="保留当前构图重新生成">保留构图</button>
+        </div>
+        <button class="btn btn-primary" style="margin-top:10px;" data-go="editor">选定候选 1，进入样衣编辑</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="composer-bar">
+    <button class="composer-icon" data-toast="上传参考图 / Logo">+</button>
+    <textarea class="composer-input" placeholder="说一句灵感，或补充班级名、Logo、标语"></textarea>
+    <button class="composer-send" data-toast="生成候选图案" aria-label="发送">
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+        <path d="M12 4 L12 20 M5 11 L12 4 L19 11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="tab-bar">
+    <div class="tab-item" data-go="home"><div class="tab-icon"></div>首页</div>
+    <div class="tab-item active"><div class="tab-icon"></div>创作</div>
+    <div class="tab-item" data-go="projects"><div class="tab-icon"></div>共创</div>
+    <div class="tab-item" data-go="my"><div class="tab-icon"></div>我的</div>
+  </div>
+</div>
+<script src="../page.js"></script>
+<script>
+(function () {
+  var phone = document.querySelector('.phone.create-page');
+  if (!phone) return;
+  function toChat() { phone.dataset.state = 'chat'; }
+  phone.querySelectorAll('.empty-template').forEach(function (c) {
+    c.addEventListener('click', toChat);
+  });
+  var sendBtn = phone.querySelector('.composer-send');
+  if (sendBtn) sendBtn.addEventListener('click', toChat);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⑦ 成员提交 · 衣想工作室原型</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●●● 100%</span></div>
+  <div class="nav-bar">
+    <span class="slot icon-back" data-go="home"></span>
+    <span class="nav-title">加入：软工毕业班服</span>
+    <span class="slot"></span>
+  </div>
+  <div class="page-body">
+    <div class="section" style="background:#f5f5f5;">
+      <div class="placeholder" style="height:200px; background:#fff;">团队基础样衣预览</div>
+      <div class="muted center" style="margin-top:6px;">统一：Logo · 班级名 · 标语 · 主色</div>
+    </div>
+    <div class="section">
+      <div class="card" style="background:#f9f9f9;">
+        <div class="bold">可改</div>
+        <div class="muted" style="margin-top:2px;">昵称 / 学号 · 个人图案 · 风格变体</div>
+        <div class="bold" style="margin-top:8px;">不可改</div>
+        <div class="muted" style="margin-top:2px;">Logo · 班级名 · 主色 · 主图位置</div>
+      </div>
+    </div>
+    <div class="section col">
+      <div class="section-title" style="padding:0;">填写你的版本</div>
+      <input class="input" placeholder="昵称">
+      <input class="input" placeholder="学号 / 编号">
+    </div>
+    <div class="section">
+      <div class="section-title">为你推荐<span class="more" data-toast="AI 重新推荐中">让 AI 重新推荐</span></div>
+      <div class="grid-2">
+        <div class="placeholder clickable active" data-chip-group="member-variant" style="height:110px; border:2px solid #000;">变体 1 ✓</div>
+        <div class="placeholder clickable" data-chip-group="member-variant" style="height:110px;">变体 2</div>
+        <div class="placeholder clickable" data-chip-group="member-variant" style="height:110px;">变体 3</div>
+        <div class="placeholder clickable" data-chip-group="member-variant" style="height:110px;">变体 4</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">尺码 / 数量</div>
+      <div>
+        <span class="chip" data-chip-group="size">S</span>
+        <span class="chip active" data-chip-group="size">M</span>
+        <span class="chip" data-chip-group="size">L</span>
+        <span class="chip" data-chip-group="size">XL</span>
+        <span class="chip" data-chip-group="size">XXL</span>
+      </div>
+      <div class="row between" style="margin-top:8px;">
+        <span class="muted">数量</span>
+        <div class="row">
+          <button class="btn btn-secondary" style="width:30px;height:30px;border-radius:50%;font-size:14px;" data-qty="minus">−</button>
+          <span style="width:30px; text-align:center;" data-qty-value>1</span>
+          <button class="btn btn-secondary" style="width:30px;height:30px;border-radius:50%;font-size:14px;" data-qty="plus">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <button class="btn btn-primary" data-go="member-status" data-toast="已提交，等待发起人审核">提交给发起人</button>
+      <div class="tiny center" style="margin-top:6px;">由发起人统一付款 · 你只填尺码</div>
+    </div>
+  </div>
+</div>
+<script src="../page.js"></script>
+</body>
+</html>

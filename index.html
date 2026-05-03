@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>衣想工作室 · 低保真原型 v0.3</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="mode-board index-page">
+
+<header class="board-hero">
+  <div>
+    <h1 class="board-title">衣想工作室 · 低保真原型 v0.3</h1>
+    <p class="board-meta">黑白灰线框 · 不引入前端框架 · 每个页面独立文件 · 对应 PRD §5–8</p>
+  </div>
+  <div class="hero-actions">
+    <button id="enter-demo" class="btn-enter">▶ 进入演示模式</button>
+    <p class="hero-tip">画板墙：俯瞰 12 个页面　·　演示模式：单屏可点击跳转</p>
+  </div>
+</header>
+
+<section class="flow-board">
+  <h3>页面流程图 <span class="flow-label">13 个页面 · 主路径 + 所有分支</span></h3>
+
+  <div class="flow-tabs-bar">
+    <span class="flow-tab-prefix">底部 Tab 入口</span>
+    <span class="flow-tab-chip">首页 → ①</span>
+    <span class="flow-tab-chip">创作 → ②</span>
+    <span class="flow-tab-chip">共创 → ⑤</span>
+    <span class="flow-tab-chip">我的 → ⑨</span>
+  </div>
+
+  <div class="flow-lane">
+    <div class="flow-lane-title">A · 发起人完整路径（创作 → 共创 → 团队下单）</div>
+    <div class="flow-row">
+      <span class="flow-card main">① 首页</span>
+      <span class="flow-step"><span class="flow-step-label">开始创作</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">② 创作页</span>
+      <span class="flow-step"><span class="flow-step-label">选定候选</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">③ 样衣编辑</span>
+      <span class="flow-step"><span class="flow-step-label">发起同款</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">④ 发起共创</span>
+      <span class="flow-step"><span class="flow-step-label">创建项目</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">⑥ 项目详情</span>
+      <span class="flow-step"><span class="flow-step-label">全员确认</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">⑧ 团队下单</span>
+      <span class="flow-step"><span class="flow-step-label">支付</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">⑩ 订单详情</span>
+    </div>
+  </div>
+
+  <div class="flow-lane">
+    <div class="flow-lane-title">B · 个人购买（不发起共创）</div>
+    <div class="flow-row">
+      <span class="flow-card main">③ 样衣编辑</span>
+      <span class="flow-step"><span class="flow-step-label">买一件</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card sub">⑧a 个人订单</span>
+      <span class="flow-step"><span class="flow-step-label">支付</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">⑩ 订单详情</span>
+    </div>
+  </div>
+
+  <div class="flow-lane">
+    <div class="flow-lane-title">C · 成员被邀请后</div>
+    <div class="flow-row">
+      <span class="flow-card main">⑥ 项目详情</span>
+      <span class="flow-step"><span class="flow-step-label">分享链接</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card sub">⑦ 成员提交</span>
+      <span class="flow-step"><span class="flow-step-label">提交后</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card sub">⑦a 我的提交状态</span>
+    </div>
+  </div>
+
+  <div class="flow-lane">
+    <div class="flow-lane-title">D · 入口直达（首页 / 共创列表）</div>
+    <div class="flow-row">
+      <span class="flow-card main">① 首页</span>
+      <span class="flow-step"><span class="flow-step-label">主题模板</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">② 创作页</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-card main">① 首页</span>
+      <span class="flow-step"><span class="flow-step-label">最近作品</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">③ 样衣编辑</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-card main">① 首页</span>
+      <span class="flow-step"><span class="flow-step-label">团队案例</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">⑥ 项目详情</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-card main">⑤ 共创列表</span>
+      <span class="flow-step"><span class="flow-step-label">查看项目</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">⑥ 项目详情</span>
+    </div>
+  </div>
+
+  <div class="flow-lane">
+    <div class="flow-lane-title">E · 我的页面（资产 / 设置）</div>
+    <div class="flow-row">
+      <span class="flow-card main">⑨ 我的</span>
+      <span class="flow-step"><span class="flow-step-label">设置图标</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card sub">⑨a 设置</span>
+      <span class="flow-meta">含 客服 / 地址 / 账号 / 关于</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-card main">⑨ 我的</span>
+      <span class="flow-step"><span class="flow-step-label">作品资产</span><span class="flow-arrow">→</span></span>
+      <span class="flow-card main">③ 样衣编辑</span>
+      <span class="flow-or">或</span>
+      <span class="flow-card main">⑥ 项目详情</span>
+      <span class="flow-or">或</span>
+      <span class="flow-card main">⑩ 订单详情</span>
+    </div>
+  </div>
+</section>
+
+<div class="demo-toolbar">
+  <button id="exit-demo" class="toolbar-btn">← 退出演示</button>
+  <span id="current-title">当前：① 首页</span>
+  <button id="btn-back" class="toolbar-btn">↩ 返回上一页</button>
+</div>
+
+<div class="board-canvas" id="board-canvas"></div>
+
+<div class="demo-stage">
+  <div class="demo-frame-wrap">
+    <iframe id="demo-frame" class="demo-frame" src="pages/home.html"></iframe>
+  </div>
+  <aside class="sitemap-panel">
+    <h3>跳转关系</h3>
+    <div class="sitemap-section">
+      <div class="sitemap-section-title">主路径</div>
+      <div class="sitemap-row" data-page="home">① 首页</div>
+      <div class="sitemap-row" data-page="create">② 创作页</div>
+      <div class="sitemap-row" data-page="editor">③ 样衣编辑</div>
+      <div class="sitemap-row" data-page="cocreate">④ 发起共创</div>
+      <div class="sitemap-row" data-page="project-detail">⑥ 项目详情</div>
+      <div class="sitemap-row" data-page="order-confirm">⑧ 下单确认</div>
+      <div class="sitemap-row" data-page="order-detail">⑩ 订单详情</div>
+    </div>
+    <div class="sitemap-section">
+      <div class="sitemap-section-title">tab 入口</div>
+      <div class="sitemap-row" data-page="projects">⑤ 共创列表</div>
+      <div class="sitemap-row" data-page="my">⑨ 我的</div>
+    </div>
+    <div class="sitemap-section">
+      <div class="sitemap-section-title">成员邀请</div>
+      <div class="sitemap-row" data-page="member-submit">⑦ 成员提交</div>
+      <div class="sitemap-row" data-page="member-status">⑦a 我的提交状态</div>
+    </div>
+    <div class="sitemap-section">
+      <div class="sitemap-section-title">个人购买</div>
+      <div class="sitemap-row" data-page="order-confirm-personal">⑧a 个人订单确认</div>
+    </div>
+    <div class="sitemap-section">
+      <div class="sitemap-section-title">个人中心</div>
+      <div class="sitemap-row" data-page="settings">⑨a 设置</div>
+    </div>
+    <p class="sitemap-tip">点击行可直接跳转<br>点手机内按钮模拟真实流程</p>
+  </aside>
+</div>
+
+<div id="toast"></div>
+
+<footer class="board-footer">
+  说明：图片资产以斜线占位框表示；主按钮黑色胶囊（PRD §9 / DESIGN.md）；不引入品牌色 / 状态色；无插画。<br>
+  文件结构：<code>style.css</code> · <code>page.js</code> · <code>pages/*.html</code>（13 个页面，可单独打开）· <code>index.html</code>（本文件）。
+</footer>
+
+<script>
+(function () {
+  /* 页面元数据：id, 序号标题, 简介 */
+  const PAGES = [
+    ['home',           '① 首页',       '品牌 · 快速输入 · 模板入口 · 团队案例 · 主 CTA「开始创作样衣」'],
+    ['create',         '② 创作页',     '保留底部 tab 的 AI 创作工作台 · 对话历史 · 候选卡进入样衣编辑'],
+    ['editor',         '③ 样衣编辑',   '样机大图 · 颜色 / 版型 / 位置 · 印刷检查 · 主 CTA「发起同款共创」'],
+    ['cocreate',       '④ 发起共创',   '类型 · 统一元素 · 可变元素 · 创作边界 · 下单规则 · 邀请'],
+    ['projects',       '⑤ 共创列表',   '我发起的 / 我加入的 · 状态过滤 · 作为「共创」tab 落地页'],
+    ['project-detail', '⑥ 项目详情',   '进度 · 成员作品（审核 / 打回）· 尺码汇总 · 全员确认后下单'],
+    ['member-submit',  '⑦ 成员提交',   '看团队样衣 + 规则 · 风格变体 · 填尺码 → 提交给发起人'],
+    ['member-status',  '⑦a 我的提交状态', '查看审核状态 · 被打回后按反馈修改'],
+    ['order-confirm',  '⑧ 团队下单确认', '联系人 · 地址 · SKU · 尺码汇总 · 风险提示 · 微信支付'],
+    ['order-confirm-personal', '⑧a 个人订单确认', '个人单件 · 单独金额和 SKU · 微信支付'],
+    ['my',             '⑨ 我的',       '作品卡片流 · 个人 / 共创 / 草稿 / 已下单 · 顶部仅留消息 / 设置入口'],
+    ['settings',       '⑨a 设置',      '客服与售后 · 收货地址 · 账号设置 · 关于'],
+    ['order-detail',   '⑩ 订单详情',   '状态时间线 · 商品 / 尺码 · 物流 · 售后']
+  ];
+  const PAGE_TITLES = Object.fromEntries(PAGES.map(p => [p[0], p[1]]));
+
+  /* 渲染画板墙 */
+  const canvas = document.getElementById('board-canvas');
+  PAGES.forEach((p, i) => {
+    const [id, title, desc] = p;
+    const wrap = document.createElement('div');
+    wrap.className = 'phone-wrap';
+    wrap.dataset.page = id;
+    const cleanTitle = title.replace(/^[①-⑩]\s*/, '');
+    wrap.innerHTML =
+      '<div class="phone-label"><span class="num">' + (i + 1) + '</span>' + cleanTitle + '</div>' +
+      '<p class="phone-desc">' + desc + '</p>' +
+      '<iframe src="pages/' + id + '.html" class="phone-frame" loading="lazy"></iframe>';
+    canvas.appendChild(wrap);
+  });
+
+  /* 状态 */
+  let demoMode = false;
+  let current = 'home';
+  const stack = [];
+  let toastTimer = null;
+  const demoFrame = document.getElementById('demo-frame');
+
+  function setMode(isDemo) {
+    demoMode = isDemo;
+    document.body.classList.toggle('mode-demo', isDemo);
+    document.body.classList.toggle('mode-board', !isDemo);
+    if (isDemo) {
+      stack.length = 0;
+      loadDemo(current);
+    }
+    window.scrollTo(0, 0);
+  }
+
+  function go(pageId) {
+    if (current === pageId) return;
+    stack.push(current);
+    current = pageId;
+    loadDemo(current);
+  }
+
+  function back() {
+    if (stack.length === 0) {
+      setMode(false);
+      return;
+    }
+    current = stack.pop();
+    loadDemo(current);
+  }
+
+  function loadDemo(pageId) {
+    const src = 'pages/' + pageId + '.html';
+    if (!demoFrame.src.endsWith(src)) {
+      demoFrame.src = src;
+    }
+    document.querySelectorAll('.sitemap-row').forEach(r => {
+      r.classList.toggle('current', r.dataset.page === pageId);
+    });
+    const t = document.getElementById('current-title');
+    if (t) t.textContent = '当前：' + (PAGE_TITLES[pageId] || pageId);
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    if (!t) return;
+    t.textContent = msg;
+    t.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 1700);
+  }
+
+  /* 工具栏按钮 */
+  document.getElementById('enter-demo').addEventListener('click', () => {
+    current = 'home';
+    setMode(true);
+  });
+  document.getElementById('exit-demo').addEventListener('click', () => setMode(false));
+  document.getElementById('btn-back').addEventListener('click', back);
+
+  /* sitemap 跳转 */
+  document.querySelectorAll('.sitemap-row').forEach(r => {
+    r.addEventListener('click', () => {
+      if (!demoMode) return;
+      const page = r.dataset.page;
+      if (page) go(page);
+    });
+  });
+
+  /* 接收 iframe 内的点击事件（postMessage） */
+  window.addEventListener('message', e => {
+    const data = e.data || {};
+    if (data.type !== 'page-action') return;
+
+    if (!demoMode) {
+      /* 画板模式：toast 直接显示；data-go 自动进入演示并跳转 */
+      if (data.toast) showToast(data.toast);
+      if (data.dest && data.dest !== 'back' && data.dest !== 'self') {
+        setMode(true);
+        go(data.dest);
+      }
+      return;
+    }
+
+    /* 演示模式：正常处理 */
+    if (data.toast) showToast(data.toast);
+    if (!data.dest) return;
+    if (data.dest === 'back') {
+      if (data.toast) setTimeout(back, 600);
+      else back();
+    } else if (data.dest !== 'self') {
+      if (data.toast) setTimeout(() => go(data.dest), 600);
+      else go(data.dest);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

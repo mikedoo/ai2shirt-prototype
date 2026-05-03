@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>④ 发起共创 · 衣想工作室原型</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●●● 100%</span></div>
+  <div class="nav-bar">
+    <span class="slot icon-back" data-go="back"></span>
+    <span class="nav-title">发起共创项目</span>
+    <span class="slot"></span>
+  </div>
+  <div class="page-body">
+    <div class="section">
+      <div class="section-title">项目类型</div>
+      <div>
+        <span class="chip active" data-chip-group="proj-type">毕业季</span>
+        <span class="chip" data-chip-group="proj-type">班服</span>
+        <span class="chip" data-chip-group="proj-type">社团服</span>
+        <span class="chip" data-chip-group="proj-type">活动服</span>
+      </div>
+    </div>
+    <div class="section col">
+      <input class="input" placeholder="项目名 · 软工 2026 毕业班服">
+      <input class="input" placeholder="团队 / 班级名">
+    </div>
+    <div class="section">
+      <div class="section-title">统一元素 · 所有人都有</div>
+      <div class="col">
+        <div class="placeholder clickable" style="height:50px;" data-toast="选择 Logo / 校徽">+ 上传 Logo / 校徽</div>
+        <input class="input" placeholder="标语 · 四年同行">
+        <div class="row between">
+          <span class="muted">主色（仅图案，UI 保持中性）</span>
+          <div class="row">
+            <div style="width:18px;height:18px;border:1px solid #000;background:#fff;"></div>
+            <div style="width:18px;height:18px;border:1px solid #000;background:#000;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">可变元素 · 成员可改</div>
+      <div>
+        <span class="chip active">昵称 / 学号</span>
+        <span class="chip active">个人图案</span>
+        <span class="chip">局部文案</span>
+        <span class="chip">角色 / 关键词</span>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">创作边界</div>
+      <div class="card">
+        <div class="row between clickable" data-toast="编辑风格范围"><span>风格范围</span><span class="muted">复古 / 插画 ›</span></div>
+        <div class="divider"></div>
+        <div class="row between clickable" data-toast="编辑禁改区"><span>禁止修改区</span><span class="muted">主图位置 ›</span></div>
+        <div class="divider"></div>
+        <div class="row between clickable" data-toast="设置截止时间"><span>截止时间</span><span class="muted">2026-05-15 ›</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">下单规则</div>
+      <div class="card">
+        <div class="row between">
+          <span class="bold">发起人统一付款</span>
+          <span class="tiny">推荐 ✓</span>
+        </div>
+        <div class="muted" style="margin-top:4px;">成员只填尺码和数量　·　MVP 暂不支持成员分摊</div>
+      </div>
+    </div>
+    <div class="section">
+      <button class="btn btn-primary" data-go="project-detail" data-toast="邀请链接已生成">生成邀请链接 / 二维码</button>
+    </div>
+  </div>
+</div>
+<script src="../page.js"></script>
+</body>
+</html>

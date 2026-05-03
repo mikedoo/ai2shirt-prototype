@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⑥ 项目详情 · 衣想工作室原型</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●●● 100%</span></div>
+  <div class="nav-bar">
+    <span class="slot icon-back" data-go="back"></span>
+    <span class="nav-title">软工 2026 毕业班服</span>
+    <span class="slot" data-go="member-submit" data-toast="模拟成员通过链接进入">分享</span>
+  </div>
+  <div class="page-body">
+    <div class="section">
+      <div class="placeholder" style="height:120px;">项目封面 · 团队样衣</div>
+      <div class="row between" style="margin-top:8px;">
+        <div>
+          <div class="bold">毕业季 · 截止 2026-05-15</div>
+          <div class="muted">已提交 28 / 35 人</div>
+        </div>
+        <span class="chip active" style="margin:0;">待下单</span>
+      </div>
+    </div>
+    <div class="section">
+      <div class="progress"><i style="width:80%;"></i></div>
+      <div class="row between" style="margin-top:6px;">
+        <span class="tiny">已通过 24</span>
+        <span class="tiny">待审核 4</span>
+        <span class="tiny">未提交 7</span>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">成员作品<span class="more" data-toast="催未交 · 替成员生成">催未交 · 替成员生成 ›</span></div>
+      <div class="grid-3">
+        <div class="clickable" data-toast="✓ 已通过 · 张同学">
+          <div class="placeholder" style="height:78px;">张同学</div>
+          <div class="tiny center" style="margin-top:2px;">✓ 已通过</div>
+        </div>
+        <div class="clickable" data-toast="审核：通过 / 打回">
+          <div class="placeholder" style="height:78px;">李同学</div>
+          <div class="tiny center" style="margin-top:2px;">⏳ 待审核</div>
+        </div>
+        <div class="clickable" data-toast="已打回，等待修改">
+          <div class="placeholder" style="height:78px;">王同学</div>
+          <div class="tiny center" style="margin-top:2px;">↺ 已打回</div>
+        </div>
+        <div class="clickable" data-toast="✓ 已通过 · 刘同学">
+          <div class="placeholder" style="height:78px;">刘同学</div>
+          <div class="tiny center" style="margin-top:2px;">✓ 已通过</div>
+        </div>
+        <div class="clickable" data-toast="该成员未提交">
+          <div class="placeholder" style="height:78px;">未提交</div>
+          <div class="tiny center" style="margin-top:2px;">— —</div>
+        </div>
+        <div class="clickable" data-toast="查看全部 28 名成员">
+          <div class="placeholder" style="height:78px;">⋯</div>
+          <div class="tiny center" style="margin-top:2px;">查看全部</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">尺码汇总<span class="more">基于已通过 24 件</span></div>
+      <div class="card">
+        <div class="grid-5">
+          <div class="center"><div class="bold">S</div><div class="tiny">3</div></div>
+          <div class="center"><div class="bold">M</div><div class="tiny">8</div></div>
+          <div class="center"><div class="bold">L</div><div class="tiny">9</div></div>
+          <div class="center"><div class="bold">XL</div><div class="tiny">3</div></div>
+          <div class="center"><div class="bold">XXL</div><div class="tiny">1</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <button class="btn btn-primary" data-toast="仍有待审核和未提交成员，暂不能下单">先处理待审核 / 未提交</button>
+      <div class="tiny center" style="margin-top:6px;">需全部成员确认后，发起人才能统一下单</div>
+    </div>
+  </div>
+</div>
+<script src="../page.js"></script>
+</body>
+</html>

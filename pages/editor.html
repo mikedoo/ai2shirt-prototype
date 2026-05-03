@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>③ 样衣编辑 · 衣想工作室原型</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="phone">
+  <div class="status-bar"><span>9:41</span><span>●●●●● 100%</span></div>
+  <div class="nav-bar">
+    <span class="slot icon-back" data-go="back"></span>
+    <span class="nav-title">样衣编辑</span>
+    <span class="slot"></span>
+  </div>
+  <div class="page-body">
+    <div class="section" style="background:#f5f5f5;">
+      <div class="placeholder" style="height:230px; background:#fff;">T 恤样机大图<br>(含图案 · 可拖动定位)</div>
+      <div class="row between" style="margin-top:6px;">
+        <span class="tiny">主印刷区域：正面胸前</span>
+        <span class="tiny">缩放 1.0 · 旋转 0°</span>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">底衫颜色</div>
+      <div class="row">
+        <div class="swatch-circle active" data-chip-group="color" style="background:#fff;"></div>
+        <div class="swatch-circle" data-chip-group="color" style="background:#000;"></div>
+        <div class="swatch-circle" data-chip-group="color" style="background:#999;"></div>
+        <div class="swatch-circle" data-chip-group="color" style="background:#e8dcc4;"></div>
+        <span class="tiny" style="margin-left:auto;">已选</span>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">版型</div>
+      <div>
+        <span class="chip active" data-chip-group="fit">标准</span>
+        <span class="chip" data-chip-group="fit">宽松</span>
+        <span class="chip" data-chip-group="fit">短款</span>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">候选图案<span class="more" data-toast="重新生成中">重新生成</span></div>
+      <div class="row" style="overflow-x:auto;">
+        <div class="placeholder clickable active" data-chip-group="cand-thumb" style="min-width:54px;height:54px;border:2px solid #000;">1 ✓</div>
+        <div class="placeholder clickable" data-chip-group="cand-thumb" style="min-width:54px;height:54px;">2</div>
+        <div class="placeholder clickable" data-chip-group="cand-thumb" style="min-width:54px;height:54px;">3</div>
+        <div class="placeholder clickable" data-chip-group="cand-thumb" style="min-width:54px;height:54px;">4</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="card clickable" style="background:#f9f9f9;" data-toast="印刷检查详情">
+        <div class="row between">
+          <span class="bold">印刷检查 · 通过</span>
+          <span class="tiny">详情 ›</span>
+        </div>
+        <div class="muted" style="margin-top:6px;">
+          ✓ 分辨率达标　✓ 在安全区内<br>⚠ 浅底浅图：建议加描边
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="editor-footer">
+    <button class="btn btn-secondary grow" data-go="cocreate">发起同款共创</button>
+    <button class="btn btn-primary grow" data-go="order-confirm-personal">买一件</button>
+  </div>
+</div>
+<script src="../page.js"></script>
+</body>
+</html>
